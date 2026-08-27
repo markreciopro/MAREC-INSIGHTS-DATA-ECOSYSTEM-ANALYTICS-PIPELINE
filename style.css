@@ -1,0 +1,268 @@
+:root {
+  --bg-dark: #0b1d1d;
+  --panel-bg: rgba(11, 37, 37, 0.92);
+  --gold: #e2b714;
+  --gold-glow: rgba(226, 183, 20, 0.4);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 2rem 1rem;
+}
+
+.marec-arch-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.arch-header h2 {
+  color: var(--gold);
+  font-size: 2rem;
+  margin-bottom: 0.35rem;
+  font-weight: 700;
+}
+
+.arch-header p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 2.5rem;
+}
+
+/* 4-Step Framework Grid */
+.framework-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.framework-card {
+  background: #ffffff;
+  color: #0f172a;
+  border-radius: 10px;
+  padding: 1.5rem 1.25rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.framework-card:hover {
+  transform: translateY(-4px);
+}
+
+.highlight-card {
+  border: 2px solid var(--gold);
+}
+
+.step-num {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0d9488;
+  margin-bottom: 0.25rem;
+}
+
+.step-cat {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #64748b;
+  margin-bottom: 0.75rem;
+}
+
+.framework-card h3 {
+  font-size: 1.05rem;
+  margin: 0 0 0.5rem 0;
+  color: #0f172a;
+}
+
+.framework-card > p {
+  font-size: 0.8rem;
+  color: #475569;
+  line-height: 1.4;
+  margin: 0 0 1.25rem 0;
+  flex-grow: 1;
+}
+
+.card-benefit {
+  background: #f1f5f9;
+  border-left: 3px solid #0d9488;
+  padding: 0.6rem 0.75rem;
+  border-radius: 4px;
+  margin-top: auto;
+}
+
+.card-benefit strong {
+  display: block;
+  font-size: 0.65rem;
+  color: #0d9488;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.15rem;
+}
+
+.card-benefit p {
+  font-size: 0.75rem;
+  color: #334155;
+  margin: 0;
+}
+
+.card-tech {
+  margin-top: 0.75rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+/* Pipeline Stage Container */
+.arch-stage {
+  position: relative;
+  width: 1000px;
+  max-width: 100%;
+  height: 520px;
+  background: var(--panel-bg);
+  border: 1px solid rgba(226, 183, 20, 0.25);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.arch-svg-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.data-line {
+  stroke: var(--gold);
+  stroke-width: 1.5;
+  stroke-opacity: 0.35;
+  stroke-dasharray: 4;
+}
+
+.etl-particle {
+  fill: #fff;
+  stroke: var(--gold);
+  stroke-width: 2px;
+  filter: drop-shadow(0 0 6px var(--gold));
+}
+
+.arch-node {
+  position: absolute;
+  z-index: 2;
+  background: rgba(15, 39, 39, 0.95);
+  border: 1px solid rgba(226, 183, 20, 0.4);
+  padding: 0.75rem 0.9rem;
+  border-radius: 8px;
+  width: 155px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.arch-node:hover, .arch-node.active {
+  border-color: var(--gold);
+  background: rgba(18, 48, 48, 0.98);
+  transform: translate(-50%, -50%) scale(1.1);
+  box-shadow: 0 0 25px var(--gold-glow), 0 8px 20px rgba(0,0,0,0.5);
+  z-index: 10;
+}
+
+.arch-node h3 {
+  font-size: 0.8rem;
+  color: var(--text-main);
+  margin: 0 0 0.15rem 0;
+}
+
+.arch-node p {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.central-hub {
+  top: 50%;
+  left: 50%;
+  width: 195px;
+  background: #113636;
+  border: 2px solid var(--gold);
+  box-shadow: 0 0 30px var(--gold-glow);
+}
+
+.central-hub h3 {
+  color: var(--gold);
+  font-size: 0.9rem;
+}
+
+.node-crs { top: 18%; left: 50%; }
+.node-crm { top: 28%; left: 28%; }
+.node-powerbi { top: 28%; left: 72%; }
+.node-erp { top: 72%; left: 28%; }
+.node-postgres { top: 72%; left: 72%; }
+.node-pos { top: 88%; left: 38%; }
+.node-hris { top: 88%; left: 62%; }
+
+.arch-infobox {
+  max-width: 750px;
+  margin: 1.5rem auto 0 auto;
+  background: rgba(15, 39, 39, 0.9);
+  border: 1px dashed rgba(226, 183, 20, 0.4);
+  padding: 0.9rem 1.15rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.info-tag {
+  color: var(--gold);
+  font-weight: 700;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 900px) {
+  .framework-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .framework-grid {
+    grid-template-columns: 1fr;
+  }
+  .arch-stage {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+  .arch-svg-lines { display: none; }
+  .arch-node, .central-hub {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: 100%;
+    max-width: 100%;
+  }
+}

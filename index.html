@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Marec</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <section class="marec-arch-section">
+  <div class="arch-header">
+    <h2>MAREC Insights Data Architecture</h2>
+    <p>Hybrid ETL & ELT Pipelines Built on Professional Privacy-First Foundations</p>
+  </div>
+
+  <!-- 4-Step Security & Deployment Framework (Matched to Live Site) -->
+  <div class="framework-grid">
+    <div class="framework-card">
+      <span class="step-num">01</span>
+      <span class="step-cat">PROTECTION FIRST</span>
+      <h3>Sign an NDA First</h3>
+      <p>Always have a standard NDA ready before diving into particulars. It signals that client privacy is handled with professional rigor.</p>
+      <div class="card-benefit">
+        <strong>BENEFIT</strong>
+        <p>Immediate alignment on strict confidentiality.</p>
+      </div>
+    </div>
+
+    <div class="framework-card highlight-card">
+      <span class="step-num">02</span>
+      <span class="step-cat">ZERO RISK</span>
+      <h3>Request "Read-Only" Access</h3>
+      <p>Never request write access or booking modification rights. Access is restricted strictly to read-only PMS or POS exports.</p>
+      <div class="card-benefit">
+        <strong>BENEFIT</strong>
+        <p>Removes fear of accidental data modification.</p>
+      </div>
+    </div>
+
+    <div class="framework-card">
+      <span class="step-num">03</span>
+      <span class="step-cat">AUTOMATED BRIDGE</span>
+      <h3>The "Data Export" Bridge</h3>
+      <p>For risk-averse teams, use automated daily or weekly CSV/Excel raw file exports instead of direct software integration.</p>
+      <div class="card-benefit">
+        <strong>BENEFIT</strong>
+        <p>Lowest-friction way to initiate analytics.</p>
+      </div>
+    </div>
+
+    <div class="framework-card">
+      <span class="step-num">04</span>
+      <span class="step-cat">PIPELINE AUTOMATION</span>
+      <h3>Python, R & Power BI</h3>
+      <p>Leverage technical pipelines to ingest exports and populate Power BI dashboards seamlessly without touching core software.</p>
+      <div class="card-benefit">
+        <strong>BENEFIT</strong>
+        <p>Zero disruption to daily property operations.</p>
+      </div>
+      <div class="card-tech">TECH: Python • R • SQL • Power BI</div>
+    </div>
+  </div>
+
+  <!-- Interactive ETL/ELT Architecture Flow Stage -->
+  <div class="arch-stage" id="archStage">
+    <svg class="arch-svg-lines" id="archSvgLines">
+      <line class="data-line" x1="50%" y1="18%" x2="50%" y2="42%"></line>
+      <line class="data-line" x1="28%" y1="28%" x2="43%" y2="45%"></line>
+      <line class="data-line" x1="72%" y1="28%" x2="57%" y2="45%"></line>
+      <line class="data-line" x1="28%" y1="72%" x2="43%" y2="55%"></line>
+      <line class="data-line" x1="72%" y1="72%" x2="57%" y2="55%"></line>
+      <line class="data-line" x1="38%" y1="88%" x2="47%" y2="60%"></line>
+      <line class="data-line" x1="62%" y1="88%" x2="53%" y2="60%"></line>
+
+      <circle class="etl-particle" cx="0" cy="0" r="4"><animateMotion path="M 500 94 L 500 218" dur="2.5s" repeatCount="indefinite" /></circle>
+      <circle class="etl-particle" cx="0" cy="0" r="4"><animateMotion path="M 280 145 L 430 234" dur="3s" repeatCount="indefinite" /></circle>
+      <circle class="etl-particle" cx="0" cy="0" r="4"><animateMotion path="M 720 145 L 570 234" dur="2.8s" repeatCount="indefinite" /></circle>
+      <circle class="etl-particle" cx="0" cy="0" r="4"><animateMotion path="M 280 374 L 430 286" dur="3.2s" repeatCount="indefinite" /></circle>
+      <circle class="etl-particle" cx="0" cy="0" r="4"><animateMotion path="M 720 374 L 570 286" dur="2.6s" repeatCount="indefinite" /></circle>
+      <circle class="etl-particle" cx="0" cy="0" r="4"><animateMotion path="M 380 458 L 470 312" dur="3.5s" repeatCount="indefinite" /></circle>
+      <circle class="etl-particle" cx="0" cy="0" r="4"><animateMotion path="M 620 458 L 530 312" dur="2.9s" repeatCount="indefinite" /></circle>
+    </svg>
+
+    <div class="arch-node central-hub" data-node="hub">
+      <h3>MAREC Data Hub</h3>
+      <p>Python/R Hybrid ETL+ELT</p>
+    </div>
+
+    <div class="arch-node node-crs" data-node="crs"><h3>CRS / Booking</h3><p>Read-Only PMS Export</p></div>
+    <div class="arch-node node-crm" data-node="crm"><h3>CRM</h3><p>Read-Only Profiles</p></div>
+    <div class="arch-node node-powerbi" data-node="powerbi"><h3>Power BI</h3><p>Load: Executive Dashboards</p></div>
+    <div class="arch-node node-erp" data-node="erp"><h3>ERP</h3><p>Read-Only Procurement</p></div>
+    <div class="arch-node node-postgres" data-node="postgres"><h3>PostgreSQL</h3><p>ELT: Cloud Staging</p></div>
+    <div class="arch-node node-pos" data-node="pos"><h3>POS</h3><p>Read-Only F&B Export</p></div>
+    <div class="arch-node node-hris" data-node="hris"><h3>HRIS / Payroll</h3><p>Read-Only Workforce Logs</p></div>
+  </div>
+
+  <div class="arch-infobox" id="archInfobox">
+    <span class="info-tag">ZERO RISK PROTOCOL:</span>
+    <span id="infoText">Hover or click any architecture node above to review live read-only security telemetry.</span>
+  </div>
+</section>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
